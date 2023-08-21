@@ -48,8 +48,11 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      # - name: Generate configuration file
-      #   run: make defconfig
+      # make oldconfig 
+      # make defconfig
+      # make menuconfig
+      - name: Generate configuration file
+        run: make oldconfig
 
       - name: Download packages
         run: make download -j16
