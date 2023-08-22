@@ -53,7 +53,7 @@ jobs:
       # make defconfig
       # make menuconfig
       - name: Generate configuration file
-        run: make menuconfig
+        run: make defconfig
 
       - name: Download packages
         run: make download -j16
